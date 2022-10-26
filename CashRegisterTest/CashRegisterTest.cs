@@ -9,7 +9,7 @@ namespace CashRegisterTest
 		public void Should_process_execute_printing()
 		{
 			//given
-			Printer printer = new Printer();
+			SpyPrinter printer = new SpyPrinter();
 			var cashRegister = new CashRegister(printer);
 			var purchase = new Purchase();
 			//when

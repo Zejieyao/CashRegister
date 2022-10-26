@@ -2,9 +2,12 @@ namespace CashRegister
 {
 	public class SpyPrinter : Printer
 	{
-		public void Print(string content)
+		public bool HasPrinted { get; set; }
+		public override void Print(string content)
 		{
 			// send message to a real printer
+			base.Print(content);
+			HasPrinted = true;
 		}
 	}
 }
